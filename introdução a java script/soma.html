@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2 style="height: 100px; text-align: center;">Teste de função JavaScript</h2>
+<br>
+<form style="height: 100px; text-align: center;" action="" method="post" name="formSoma">
+<input type="number" name="valor_um">
+<input type="number" name="valor_dois">
+<input type="button" name="btn_soma" value="Somar" onclick="somar()" />
+<input type="reset" name="btn_cancela" value="Cancelar" />
+</form>
+
+<script language="javascript">
+
+
+var valor_um_js;
+var valor_dois_js;
+var resultado_js;
+
+
+function somar(){
+
+/*Recebendo valor do formulario*/
+
+valor_um_js = document.formSoma.valor_um.value;
+valor_dois_js = document.formSoma.valor_dois.value;
+
+/*Processamento*/
+    resultado_js = parseInt(valor_um_js) + parseInt(valor_dois_js);
+
+/*Impressão de Resultado*/
+window.alert('O resultado da soma é: ' + resultado_js);
+
+}
+
+    </script>
+</body>
+</html>

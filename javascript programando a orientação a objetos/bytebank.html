@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bytebank.html</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h3>Bytebank Depositar</h3>
+
+    <!-- formulario -->
+    <form name="FormByte" action=" " method="post">
+        Digite sua conta....: <input type="text" name="f_conta" />
+        <p></p>
+        Digite o valor...: <input type="number" name="f_valor" />
+        <p></p>
+        <input type="button" name="btn_deposita" value="Depositar" onclick="dep()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+
+    <!-- Definiçao do codigo JavaScript -->
+    <script language="javascript">
+<!--
+        import { ContaCorrente } from "./ContaCorrente.js";
+        import { Cliente } from "./Cliente.js";
+
+            var js_conta;
+            var js_valor;
+
+
+        js_conta = document.FormByte.f_conta.value;
+        js_valor = document.FormByte.f_valor.value;
+
+        function dep(){
+
+            Window.alert("e nois");
+
+        }
+
+        //      //Criação de duas contas correntes
+        // const contaCorrentePaulo = new ContaCorrente();
+        // const contaCorrenteKamilla = new ContaCorrente();
+
+        // //população de contas correntes 
+        // contaCorrenteKamilla.cliente = clienteKamilla;
+        // contaCorrenteKamilla.agencia = 2226;
+
+
+        // contaCorrentePaulo.cliente = clientePaulo;
+        // contaCorrentePaulo.agencia = 1608;
+
+                /* Entrada de Dados */
+  
+
+            // if (js_conta == contaCorrenteKamilla) {
+            //     contaCorrenteKamilla.Depositar(js_valor);
+            //     window.alert(contaCorrenteKamilla);
+
+            // } else if (js_conta == contaCorrentePaulo) {
+            //     contaCorrentePaulo.Depositar(js_valor);
+            //     window.alert(contaCorrentePaulo);
+            // } else {
+            //     window.alert("Conta não é valida !!!");
+            // }
+
+            
+
+        
+
+    </script>
+</body>
+
+</html>
