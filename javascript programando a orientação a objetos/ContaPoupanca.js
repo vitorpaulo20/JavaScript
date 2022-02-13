@@ -1,30 +1,14 @@
+import { Conta } from "./Conta.js";
 
 
-export class ContaPoupanca {
-
-    constructor(saldoInicial, cliente, agencia) {
-        this._saldo = saldoInicial;
-        this._cliente = cliente;
-        this.agencia = agencia;
+export class ContaPoupanca extends Conta{
+    static numeroDeContasPoupanca = 0;
+    constructor(cliente, agencia) {
+        super(cliente, agencia);
+        ContaPoupanca.numeroDeContasPoupanca +=1;
     }
 
-    get saldo() {
 
-        return this._saldo;
-    }
-
-    get cliente() {
-
-        return this._cliente;
-    }
-
-    set cliente(novoCliente) {
-
-        if (novoCliente instanceof Cliente) {
-            this._cliente = novoCliente;
-        }
-
-    }
 
 
 };

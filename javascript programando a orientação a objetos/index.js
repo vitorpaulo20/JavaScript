@@ -1,7 +1,7 @@
 import { ContaCorrente } from "./ContaCorrente.js";
 import {Cliente} from "./Cliente.js";
 import { ContaPoupanca } from "./ContaPoupanca.js";
-import { Conta } from "./Conta.js";
+
 
 
 /*Para importar dessa forma é necessario o nome da classe
@@ -33,16 +33,23 @@ const clientePaulo = new Cliente("Paulo Vitor","09675694432","8581386");
 
 
 //Criação de duas contas correntes
-const contaCorrentePaulo = new Conta(clientePaulo, 1608, 3000);
+const contaCorrentePaulo = new ContaCorrente(clientePaulo, 1608);
 
-const contaPauloPoup = new Conta(clientePaulo,2000);
+const contaPauloPoup = new ContaPoupanca(clientePaulo,1716);
 
 
 //teste se ele deposita valor negativo 
 //contaCorrentePaulo.depositar(-500);
 
 
+contaCorrentePaulo.depositar(1000);
+contaCorrentePaulo.sacar(500);
 
+contaPauloPoup.depositar(1000);
+contaPauloPoup.sacar(500);
+
+
+console.log(contaCorrentePaulo);
 console.log(contaPauloPoup);
 
 
