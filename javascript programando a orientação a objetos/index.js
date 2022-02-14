@@ -1,8 +1,10 @@
-import { ContaCorrente } from "./ContaCorrente.js";
+import { ContaCorrente } from "./Conta/ContaCorrente.js";
 import {Cliente} from "./Cliente.js";
-import { ContaPoupanca } from "./ContaPoupanca.js";
-
-
+import { ContaPoupanca } from "./Conta/ContaPoupanca.js";
+import {ContaSalario} from "./Conta/ContaSalario.js";
+import {Gerente} from "./Funcionarios/Gerente.js";
+import {Diretor} from "./Funcionarios/Diretor.js";
+ 
 
 /*Para importar dessa forma é necessario o nome da classe
 e o endereço do arquivo boa pratica inserir o endereço absoluto 
@@ -24,8 +26,8 @@ todas as classes que estão sendo importadas no arquivo index.
 
 */
 
-
-const clientePaulo = new Cliente("Paulo Vitor","09675694432","8581386");
+//criação de cliente
+// const clientePaulo = new Cliente("Paulo Vitor","09675694432","8581386");
 
 
 
@@ -33,29 +35,41 @@ const clientePaulo = new Cliente("Paulo Vitor","09675694432","8581386");
 
 
 //Criação de duas contas correntes
-const contaCorrentePaulo = new ContaCorrente(clientePaulo, 1608);
+// const contaCorrentePaulo = new ContaCorrente(clientePaulo, 1608);
 
-const contaPauloPoup = new ContaPoupanca(clientePaulo,1716);
+// const contaPauloPoup = new ContaPoupanca(clientePaulo,1716);
 
 
 //teste se ele deposita valor negativo 
 //contaCorrentePaulo.depositar(-500);
 
 
-contaCorrentePaulo.depositar(1000);
-contaCorrentePaulo.sacar(500);
+// contaCorrentePaulo.depositar(1000);
+// contaCorrentePaulo.sacar(500);
 
-contaPauloPoup.depositar(1000);
-contaPauloPoup.sacar(500);
-
-
-console.log(contaCorrentePaulo);
-console.log(contaPauloPoup);
+// contaPauloPoup.depositar(1000);
+// contaPauloPoup.sacar(500);
 
 
+// console.log(contaCorrentePaulo);
+// console.log(contaPauloPoup);
+
+
+// const contaSa = new ContaSalario(clientePaulo,500);
+// contaSa.depositar(1000);
+// contaSa.sacar(500);
+// console.log(contaSa);
 
 
 
+// const conta = new Conta(clientePaulo,5001);
+// console.log(conta);
+
+
+
+
+const diretor = new Diretor(marcos,5000,123456963);
+const gerente = new Gerente(kleber,2500,369456852);
 
 
 

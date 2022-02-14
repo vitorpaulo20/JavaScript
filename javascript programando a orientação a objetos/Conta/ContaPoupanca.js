@@ -8,7 +8,12 @@ export class ContaPoupanca extends Conta{
         ContaPoupanca.numeroDeContasPoupanca +=1;
     }
 
+sacar(valor){
+const taxa = 1.02;
+let valorAjustado = valor*taxa;
+super._sacar(valorAjustado);
 
+}
 
 
 };
