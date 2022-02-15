@@ -4,6 +4,8 @@ import { ContaPoupanca } from "./Conta/ContaPoupanca.js";
 import {ContaSalario} from "./Conta/ContaSalario.js";
 import {Gerente} from "./Funcionarios/Gerente.js";
 import {Diretor} from "./Funcionarios/Diretor.js";
+import {SistemaDeAutenticacao} from "./SistemaDeAutenticacao.js";
+
  
 
 /*Para importar dessa forma é necessario o nome da classe
@@ -27,7 +29,7 @@ todas as classes que estão sendo importadas no arquivo index.
 */
 
 //criação de cliente
-// const clientePaulo = new Cliente("Paulo Vitor","09675694432","8581386");
+ const clientePaulo = new Cliente("Paulo Vitor","09675694432","8581386");
 
 
 
@@ -68,8 +70,16 @@ todas as classes que estão sendo importadas no arquivo index.
 
 
 
-const diretor = new Diretor(marcos,5000,123456963);
-const gerente = new Gerente(kleber,2500,369456852);
+const diretor = new Diretor("marcos",5000,123456963);
+const gerente = new Gerente("kleber",2500,369456852);
+
+console.log(diretor);
+diretor.cadastrarSenha("123456");
+console.log(gerente);
+
+const estaLogado = SistemaDeAutenticacao.login(clientePaulo,"123456")
+
+console.log(clientePaulo.senha);
 
 
 
