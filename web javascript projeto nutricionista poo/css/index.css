@@ -3,6 +3,7 @@
  }
 
 body{
+	background-color: #0c8cd3;
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 }
@@ -38,6 +39,8 @@ header .container:before{
 	margin: 0 auto;
 }
 
+
+
 section{
 	margin: 2em 0;
 	overflow: hidden;
@@ -55,6 +58,7 @@ table{
 	width: 100%;
 	margin-bottom : .5em;
     table-layout: fixed;
+	
 
 }
 
@@ -63,11 +67,13 @@ td, th {
 	margin: 0;
 	border: 1px solid #ccc;
 	text-align: center;
+	
 }
 
 th{
 	font-weight: bold;
 	background-color: #EEE;
+	
 }
 
 label{
@@ -131,4 +137,9 @@ button[disabled=disabled], button:disabled {
 
 .campo-invalido{
 	border: 1px solid red;
+}
+
+.paciente-invalido{
+	background-color: orange;
+	font-style: italic;
 }
