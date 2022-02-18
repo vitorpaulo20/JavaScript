@@ -88,19 +88,54 @@ class Nutricao {
 
 }
 
-//console.log(pesoPaulo.textContent);
+//testes dos metodos da classe Nutricao
 
-// const clientePaulo = new Nutricao("Paulo", 88, 1.77,"paciente-paulo");
+/*
+console.log(pesoPaulo.textContent);
 
-// clientePaulo.manipulaHTML();
+const clientePaulo = new Nutricao("Paulo", 88, 1.77,"paciente-paulo");
 
-// console.log(clientePaulo.calcularImc());
+clientePaulo.manipulaHTML();
 
-//console.log(clientePaulo._paciente);
+console.log(clientePaulo.calcularImc());
 
-//console.log(imcTd);
+console.log(clientePaulo._paciente);
 
-//console.log(clientePaulo.imcCliente);
+console.log(imcTd);
+
+console.log(clientePaulo.imcCliente);
+
+*/
+
+
+
+
+//capta do formulario do html o botão pelo id
+var botaoHt = document.querySelector("#adicionar-paciente");
+
+//adiciona escuta no botão passando o tipo do evento que ele deve escutar e uma função que ele deve seguir quando a escutar 
+botaoHt.addEventListener("click",function(event){
+
+
+//reseta o evento do botão transformando em defalt para evitar o comportamento de recarregar a pagina e limpar o os campos input    
+ event.preventDefault(event);
+
+
+//captura tudo da tag form e adiciona a uma variavel 
+var formAtr = document.querySelector("#form-adiciona");
+
+
+
+//não precisamos do atributo textContent para atribuir valores de input apenas o chamamos pelo nome no input lá no html com o operador ponto -> (.) 
+var nomejs = formAtr.altura.value;
+
+
+
+console.log(nomejs);
+console.log("você clicou aqui !!!");
+
+});
+
 
 
 //Alteração do titulo
@@ -108,6 +143,9 @@ class Nutricao {
 var titulo = document.querySelector(".tituloPagina");
     
 titulo.textContent = "Aparecida Nutricionista";
+
+
+
 
 for (var i = 0; i < 5; i++) {
 
@@ -135,10 +173,9 @@ for (var i = 0; i < 5; i++) {
  
 
     if (tdPeso.textContent >= 400 || tdPeso.textContent <= 0) {
-        pacientes.classList.add("paciente-invalido");
-
-
-   
+        //se o peso form invalido ele vai adicionar a classe css ao html captado pela variavel pacientes
+        //que muda a cor da linha
+        pacientes.classList.add("paciente-invalido");   
     } else {
         var peso = tdPeso.textContent;
     }
@@ -148,3 +185,10 @@ for (var i = 0; i < 5; i++) {
     tdImc.textContent = imc.toFixed(0);
 
 }
+
+
+
+
+
+
+

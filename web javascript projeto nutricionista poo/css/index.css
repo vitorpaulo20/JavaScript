@@ -3,7 +3,7 @@
  }
 
 body{
-	background-color: #0c8cd3;
+	background-color: brown;
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 }
@@ -142,4 +142,10 @@ button[disabled=disabled], button:disabled {
 .paciente-invalido{
 	background-color: orange;
 	font-style: italic;
+}
+
+.formPacienteLabels label{
+
+color: black;
+
 }
