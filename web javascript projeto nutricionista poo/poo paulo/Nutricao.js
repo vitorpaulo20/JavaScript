@@ -1,92 +1,92 @@
-class Nutricao {
+// class Nutricao {
 
-    constructor(nome, pesoC, alturaC, paciente) {
+//     constructor(nome, pesoC, alturaC, paciente) {
 
-        this.nome = nome;
-        this._paciente = paciente;
-        let imcCliente;
+//         this.nome = nome;
+//         this._paciente = paciente;
+//         let imcCliente;
 
-        if (pesoC < 0 || pesoC > 1000) {
-            alert(`Peso: ${pesoC} invalido`);
+//         if (pesoC < 0 || pesoC > 1000) {
+//             alert(`Peso: ${pesoC} invalido`);
 
-            throw new Error("Peso inserido é invalido");
-        } else {
-            this._peso = pesoC;
-        }
+//             throw new Error("Peso inserido é invalido");
+//         } else {
+//             this._peso = pesoC;
+//         }
 
-        if (alturaC < 0 || alturaC > 1000) {
-            alert(`Altura: ${alturaC} invalido`);
-            throw new Error("Altura inserido é invalido");
-        } else {
-            this._altura = alturaC;
+//         if (alturaC < 0 || alturaC > 1000) {
+//             alert(`Altura: ${alturaC} invalido`);
+//             throw new Error("Altura inserido é invalido");
+//         } else {
+//             this._altura = alturaC;
 
-        }
+//         }
 
-    }
+//     }
 
-    get paciente() {
-        return this._paciente;
-    }
-
-
-    get peso() {
-        return this._peso;
-
-    }
-
-    get altura() {
-        return this.altura;
-    }
-
-    alteraTitulo(titulo) {
-        titulo = document.querySelector(".tituloPagina");
-
-        titulo.textContent = prompt("Digite o novo Titulo da Página: ");
-
-    }
+//     get paciente() {
+//         return this._paciente;
+//     }
 
 
+//     get peso() {
+//         return this._peso;
 
-    manipulaHTML() {
+//     }
 
-        var html = document.querySelector(`#${this._paciente}`);
+//     get altura() {
+//         return this.altura;
+//     }
 
-        var alturaPaulo = html.querySelector(".info-altura");
+//     alteraTitulo(titulo) {
+//         titulo = document.querySelector(".tituloPagina");
 
-        alturaPaulo.textContent = this._altura;
+//         titulo.textContent = prompt("Digite o novo Titulo da Página: ");
 
-        var pesoPaulo = html.querySelector(".info-peso");
-
-        pesoPaulo.textContent = this._peso;
-
-    }
-
-    calcularImc(pacienteParam) {
-
-        let resultadoCalculo = this._peso / (this._altura * this._altura);
-
-        this.imcCliente = resultadoCalculo;
-
-        //let resultadoFinal = `O seu IMC ${this.nome} é igual a: ${this.imcCliente}`;
-
-
-        if (pacienteParam == null) {
-            var pacienteParam = document.querySelector(`#${this._paciente}`);
-        }
-
-        pacienteParam = document.querySelector(`#${this._paciente}`);
+//     }
 
 
 
-        var imcDoHtml = pacienteParam.querySelector(".info-imc");
+//     manipulaHTML() {
 
-        imcDoHtml.textContent = resultadoCalculo;
+//         var html = document.querySelector(`#${this._paciente}`);
+
+//         var alturaPaulo = html.querySelector(".info-altura");
+
+//         alturaPaulo.textContent = this._altura;
+
+//         var pesoPaulo = html.querySelector(".info-peso");
+
+//         pesoPaulo.textContent = this._peso;
+
+//     }
+
+//     calcularImc(pacienteParam) {
+
+//         let resultadoCalculo = this._peso / (this._altura * this._altura);
+
+//         this.imcCliente = resultadoCalculo;
+
+//         //let resultadoFinal = `O seu IMC ${this.nome} é igual a: ${this.imcCliente}`;
 
 
-        return resultadoCalculo;
-    }
+//         if (pacienteParam == null) {
+//             var pacienteParam = document.querySelector(`#${this._paciente}`);
+//         }
 
-}
+//         pacienteParam = document.querySelector(`#${this._paciente}`);
+
+
+
+//         var imcDoHtml = pacienteParam.querySelector(".info-imc");
+
+//         imcDoHtml.textContent = resultadoCalculo;
+
+
+//         return resultadoCalculo;
+//     }
+
+// }
 
 //testes dos metodos da classe Nutricao
 
@@ -127,12 +127,55 @@ var formAtr = document.querySelector("#form-adiciona");
 
 
 //não precisamos do atributo textContent para atribuir valores de input apenas o chamamos pelo nome no input lá no html com o operador ponto -> (.) 
-var nomejs = formAtr.altura.value;
+var nomeJs = formAtr.nome.value;
+var pesoJs = formAtr.peso.value;
+var alturaJs= formAtr.altura.value;
+var gorduraJs= formAtr.gordura.value;
+
+//cria elemento dentro do html 
+var pacienteTr = document.createElement("tr");
+
+
+//cria elemento dentro do html 
+var nomeTd = document.createElement("td");
+var pesoTd = document.createElement("td");
+var alturaTd = document.createElement("td");
+var gorduraTd = document.createElement("td");
+var imcTd = document.createElement("td");
+
+
+//atribui os elementos recebidos do form para dentro da tag criada no html
+nomeTd.textContent = nomeJs;
+pesoTd.textContent = pesoJs;
+alturaTd.textContent = alturaJs;
+gorduraTd.textContent = gorduraJs;
+
+
+// serve para tornar filho de elemento do html o parametro recebido 
+pacienteTr.appendChild(nomeTd);
+pacienteTr.appendChild(pesoTd);
+pacienteTr.appendChild(alturaTd);
+pacienteTr.appendChild(gorduraTd);
+
+console.log(pacienteTr);
 
 
 
-console.log(nomejs);
-console.log("você clicou aqui !!!");
+var tabela = document.querySelector("#tabela-pacientes");
+
+// inseri dentro da body mais uma linha para a tabela 
+tabela.appendChild(pacienteTr);
+
+
+
+
+
+console.log(nomeJs);
+console.log(pesoJs);
+console.log(alturaJs);
+console.log(gorduraJs);
+
+
 
 });
 
