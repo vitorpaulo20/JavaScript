@@ -85,13 +85,18 @@ imc:calculaImc(formAtr.peso.value,formAtr.altura.value)
 function montaTr(obsPaciente){
 //cria elemento dentro do html 
 var pacienteTr = document.createElement("tr");
+pacienteTr.classList.add("paciente");
 
 
 //cria elemento dentro do html 
 var nomeTd = document.createElement("td");
+nomeTd.classList.add("info-nome");
 var pesoTd = document.createElement("td");
+pesoTd.classList.add("info-peso");
 var alturaTd = document.createElement("td");
+alturaTd.classList.add("info-altura");
 var gorduraTd = document.createElement("td");
+gorduraTd.classList.add("info-gordura");
 var imcTd = document.createElement("td");
 
 //atribui os elementos recebidos do form para dentro da tag criada no html
@@ -114,6 +119,8 @@ var tabela = document.querySelector("#tabela-pacientes");
 // inseri dentro da body mais uma linha para a tabela 
 tabela.appendChild(pacienteTr);
 
+formAtr.reset();
+
 return pacienteTr;
 }
 
@@ -128,3 +135,7 @@ return pacienteTr;
 
 
 });
+
+
+
+
