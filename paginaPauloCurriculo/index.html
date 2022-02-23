@@ -6,24 +6,49 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pagina de Login</title>
-	<link rel="stylesheet" href="./CSS/INDEX.CSS">
+	<link rel="stylesheet" href="./CSS/body.css">
+	<link rel="stylesheet" href="./CSS/formularioLogin.css">
+	<link rel="stylesheet" href="./CSS/rodapeDaPagina.css">
+	<link rel="stylesheet" href="./CSS/paragrafos.css">
 </head>
 
 <body class="corpoHtml">
+	<!-- caso erre a senha 	 -->
+	<span class="senhaErrada"></span>
+	<!-- titulo do formulario  -->
 
-	<h2>Acesso do Administrador</h2>
-	<form class="formularioLogin">
-		<input type="email" id="emailLogin" class="inputValor" nome="emailLogin" placeholder="E-mail">
-		<br>
-		<input type="password" id="senhaLogin" nome="senhaLogin" placeholder="Senha">
-		<br>
-		<br>
-		<button class="botaoLogin" value="botaoLogin">Acessar</button>
+	<div class="divFormularioLogin">
+
+		<form class="formularioLogin">
+			<h2>Acesso do Administrador</h2>
+			<input type="email" id="emailLogin" class="inputValor" nome="emailLogin" placeholder="E-mail">
+			<br>
+			<input type="password" id="senhaLogin" nome="senhaLogin" placeholder="Senha">
+			<br>
+			<br>
+			<button class="botaoLogin" value="botaoLogin">Acessar</button>
+		</form>
+	</div>
+
+	<!-- <div>
+		<p>
+			Mussum Ipsum, cacilds vidis litro abertis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que
+			eu levo!Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Leite de capivaris, leite de
+			mula manquis sem cabeça.Suco de cevadiss deixa as pessoas mais interessantis.
+		</p>
+
+	</div> -->
 
 
-	</form>
+	<div class="rodape">
+		<a href="https://github.com/vitorpaulo20" target="_blank"><label>Developed by Paulo Vitor</label></a>
+	</div>
+
+
+
 </body>
 
 <script src="./JS/index.js"></script>
+<script src="./JS/textoSobe.js"></script>
 
 </html>

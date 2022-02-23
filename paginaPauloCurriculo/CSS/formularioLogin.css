@@ -1,0 +1,35 @@
+.formularioLogin{
+    display:grid;
+    height: 100px;
+    position: absolute;
+    left: 37%;
+}
+
+.formularioLogin input{
+border-radius: 10px;
+}
+
+.botaoLogin:hover {    
+    font-size: 30px;
+    background: darkorange;
+    color: black;
+    transition: 1.0s;
+}
+
+.botaoLogin:active{
+    cursor: progress;
+}
+
+
+.formularioLogin button{
+    border-radius: 15px;
+}
+
+.corpoHtml h2{   
+    width: 280px;
+    color: blanchedalmond;
+    left: 450px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%);
+    border-radius: 20px;
+
+}

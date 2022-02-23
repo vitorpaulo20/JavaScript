@@ -14,27 +14,31 @@ botaoAcesso.addEventListener("click", function (event) {
     console.log(senhaInserida);
 
     validaAcesso(senhaInserida);
+    form.reset();
 
 })
 
 
-function validaAcesso(senhaInserida) {
+function validaAcesso(senhaInserida,form) {
 
 
-    var regexSenha = "^([A-Z])([0-9]{8})$";
+    var regexSenha = "^([A-Z])([a-z]+[0-9]{2})$";
     var expression = new RegExp(regexSenha, "g");
 
     if (expression.test(senhaInserida)) {
 
         setTimeout(function() {
             console.log(`sua senha ${senhaInserida} esta nos padrões`);
-            return window.open("/NETFLIX/index.html");
+            window.open("/NETFLIX/index.html");
+    
 
-        }, 500)
+        }, 1500)
 
 
     } else {
-        return alert(`sua senha ${senhaInserida} não esta nos padrões !!!`);
+         alert(`sua senha ${senhaInserida} não esta nos padrões !!!`);
+        var spanSenha = document.querySelector(".senhaErrada");
+        spanSenha.textContent = `Sua senha deve iniciar com uma letra Maiuscula seguido de letras minusculas e terminar com dois numeros.`
     }
 
 

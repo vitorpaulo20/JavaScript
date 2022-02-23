@@ -1,0 +1,15 @@
+
+body{
+
+    background:linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../IMAGENS/formularioLoginPrincipal.jpg');font-size: 16px;
+    height: 400px;
+    background-size:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+
+}
+
+
