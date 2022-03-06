@@ -1,0 +1,25 @@
+
+.frase{
+font-size: 20px;
+text-align: left;
+
+
+}
+
+.jogoAcabou{
+    background-color: lightgrey;
+}
+
+.campoDigitacao{
+font-size: 20px;
+height: 100px;
+border: 3px solid black;
+}
+
+.borda-verde{
+    border: 3px solid green;
+}
+
+.borda-vermelha{
+    border: 3px solid red;
+}
