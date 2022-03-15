@@ -5,6 +5,7 @@ var ImagePadding = 20
 showMovieData()
 
 
+console.log('botaoInfo');
 
 
 
@@ -13,3 +14,5 @@ async function showMovieData(){
 
     
 }
+
+
