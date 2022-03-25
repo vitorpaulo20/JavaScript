@@ -1,0 +1,60 @@
+.formulario {
+    position: absolute;
+    left: 40%;
+    margin-top: 05%;
+}
+
+.botaoLiberacao {
+    margin-top: 5%;
+}
+
+.cpfCnpjLabel {
+    margin-bottom: 10%;
+
+}
+
+.pvLabel {
+    margin-bottom: 10%;
+}
+
+
+#tblExport{
+
+    column-rule-style: dashed;
+
+}
+
+.tdCp{
+    border: 1px solid black;
+}
+
+
+.tdPv{
+    border: 1px solid black;
+}
+
+.theadCNP{
+    border: 1px solid black;
+}
+
+
+.theadPV{
+    border: 1px solid black;
+}
+
+.tabelaLib{
+  
+position: absolute;
+top: 100px;
+left: 100px;
+
+}
+
+#btnExport{
+
+   position: relative;
+   left: 210px; 
+   top: -70px;
+   height: 36px;
+ 
+}

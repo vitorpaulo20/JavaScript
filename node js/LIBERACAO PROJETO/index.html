@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBERAÇÃO</title>
+
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+
+<body class="corpoPrograma">
+
+    <div class="menu"></div>
+
+
+    <div class="conteudo">
+        <form class="formulario" method="get">
+            <label class="cpfCnpjLabel">Digite o CNPJ ou CPF</label>
+            <br>
+            <input type="text" name="inputC" id="inputC" placeholder="CPF ou CNPJ">
+            <br>
+            <label class="pvLabel">Digite a pré-venda:</label>
+            <br>
+            <input type="text" name="inputPV" id="inputPV" placeholder="N° DA PV">
+            <br>
+            <button class="botaoLiberacao">Enviar</button>
+
+        </form>
+
+
+    </div>
+
+
+    <div class="tabelaLib">
+
+        <table id="tblExport" style="border:1px solid black">
+            <thead>
+                <tr>
+                    <th class="theadCNP">CNPJ / CPF</th>
+                    <th class="theadPV">PV</th>
+                </tr>
+            </thead>
+            <tbody class="corpoTabela">
+              
+            </tbody>
+
+        </table>
+
+        <button id="btnExport">Exportar</button>
+
+        
+    </div>
+
+
+
+    
+    <script  src="../executa.js"></script>
+    <script  src="./JS/ControlerLiberacao.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.min.js"
+        integrity="sha512-Luni/bgIuhuqkKPmUlB6QZa3/wXHVlrofcdlDrblMjFXNJjBMIuRweuBDsWTAvRYVod0lawFAq4zqtnmjKXePA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+</body>
+
+</html>
